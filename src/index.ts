@@ -5,7 +5,7 @@ import events from "events";
 import fs from "fs";
 import readline from "readline";
 
-const infile = './src/day01/data/screen.dat';
+const infile = './src/day01/data/input1.dat';
 
 (async function processLineByLine() {
   try {
@@ -20,9 +20,8 @@ const infile = './src/day01/data/screen.dat';
     });
 
     rl.on("line", (line) => {
-      console.log(line);
+      // console.log(line);
       let fields = splitLine(line);
-      // console.log(`${Number(fields.pop())}, ${fields.pop()}`);
 
       list2.push(Number(fields.pop()));
       list1.push(Number(fields.pop()));
@@ -30,12 +29,23 @@ const infile = './src/day01/data/screen.dat';
     
     await events.once(rl, 'close');
 
-    list1.forEach((x) => console.log(x));
-    list2.forEach((x) => console.log(x));
+    list1.sort();
+    list2.sort();
+
+    var distance: number[] = [];
+    for(var i = 0; i < list1.length; i++) {
+      distance.push(Math.abs(list1[i] - list2[i]));
+      console.log(`${list1[i]}, ${list2[i]}, ${distance[i]}`);
+    }
+    console.log(distance.reduce(add));
   } catch (err) {
     console.error(err);
   }
 })();
+
+function add(reduction: number, element: number): number {
+  return reduction + element;
+}
 
 function splitLine(line: string): string[] {
   return line.split(/\s+/);
