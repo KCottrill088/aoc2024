@@ -1,6 +1,9 @@
-export function occurrences(ar: number[]): object {
-  if (ar.length === 1) {
-    return { 1: 1}
-  }
-  return {};
+export function occurrences(ar: number[]): { [index: number]: number } {
+  let occurrences: { [index: number]: number } = {};
+
+  ar.forEach((el) => {
+    occurrences[el] = occurrences[el] === undefined ? 1 : occurrences[el] + 1;
+  })
+
+  return occurrences;
 }
