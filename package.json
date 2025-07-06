@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest --watch",
+    "aoc": "node ./dist/src/day01/index.js",
     "build": "tsc",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",

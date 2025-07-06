@@ -7,7 +7,7 @@ import events from "events";
 import fs from "fs";
 import readline from "readline";
 
-const infile = './src/day01/data/input1.dat';
+const infile = `./src/day01/data/${process.argv[2]}.dat`;
 
 (async function processLineByLine() {
   try {
