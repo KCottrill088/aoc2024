@@ -1,5 +1,5 @@
 //tsc
-//node ./dist/src/index.js
+//node ./dist/src/day01.js <screen/input1>
 
 import { similarity } from "./day01/similarity";
 

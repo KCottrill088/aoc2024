@@ -1,13 +1,13 @@
 //tsc
-//node ./dist/src/day02/index.js
+//node ./dist/src/day02.js <screen/input1>
 
 import events from "events";
 import fs from "fs";
 import readline from "readline";
 
-import { safe } from "./safe";
+import { safe } from "./day02/safe";
 
-const infile = "./src/day02/data/input1.dat";
+const infile = `./src/day02/data/${process.argv[2]}.dat`;
 
 (async function processLineByLine() {
   let reports: number[][] = [];
