@@ -1,7 +1,7 @@
 //tsc
 //node ./dist/src/index.js
 
-import { similarity } from "./similarity";
+import { similarity } from "./day01/similarity";
 
 import events from "events";
 import fs from "fs";

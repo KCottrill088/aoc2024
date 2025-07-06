@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "aoc": "node ./dist/src/day01/index.js",
+    "aoc": "node ./dist/src/ --",
     "build": "tsc",
     "clean": "rm -rf dist",
     "test": "jest --watch"
