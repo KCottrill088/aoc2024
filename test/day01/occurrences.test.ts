@@ -1,4 +1,4 @@
-import { occurrences } from "../src/occurrences";
+import { occurrences } from "../../src/day01/occurrences";
 
 test.each([
   { ar: [], expected: {} },

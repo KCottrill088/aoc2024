@@ -1,4 +1,4 @@
-import { similarity } from "../src/similarity";
+import { similarity } from "../../src/day01/similarity";
 
 test.each([
   { l1: [1], l2: [], expected: 0 },
